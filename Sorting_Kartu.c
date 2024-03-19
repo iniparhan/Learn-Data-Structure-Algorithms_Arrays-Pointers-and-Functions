@@ -1,28 +1,23 @@
-// Deadline tgl 19
-// jam 11.59 pm
-
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
 
-// Fungsi untuk mengkonversi nilai kartu ke angka
 int nilaiKartu(char kartu[]) {
     if (strcmp(kartu, "J") == 0) return 11;
     if (strcmp(kartu, "Q") == 0) return 12;
     if (strcmp(kartu, "K") == 0) return 13;
-    return atoi(kartu); // Mengkonversi string ke integer
+    return atoi(kartu); 
 }
 
-// Fungsi utama
 int main() {
 
     int banyak_angka;
     printf("Masukkan Banyaknya angka: ");
-    scanf("%d", &banyak_angka); // Membaca jumlah kartu
+    scanf("%d", &banyak_angka);
 
-    char kartu[banyak_angka][3]; // Array untuk menyimpan nilai kartu
+    char kartu[banyak_angka][3]; 
     for(int i = 0; i < banyak_angka; i++) {
-        scanf("%s", kartu[i]); // Membaca nilai kartu
+        scanf("%s", kartu[i]); 
     }
 
     int langkahPertukaran = 0;
@@ -50,7 +45,6 @@ int main() {
             }
         }
     }
-
 
     printf("\n\nJumlah langkah pertukaran: %d\n", langkahPertukaran);
     return 0;
